@@ -12,8 +12,8 @@ class ContactUsForm(forms.Form):
 
 class BandForm(forms.ModelForm):
    class Meta:
-     model = Band
-     exclude = ('active', 'official_homepage')
+      model = Band
+      exclude = ('active', 'official_homepage')
      
 class ListingForm(forms.ModelForm):
    class Meta:

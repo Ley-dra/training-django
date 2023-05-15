@@ -7,7 +7,7 @@
 <h1>Listings</h1>
 <ul>
     {% for list in lists %}
-    <li><a href="{% url 'listing-detail' list.id %}">{{ list.title }}</a></li>
+    <li><a href="{% url 'listing-detail' list.id %}">{{ list.title }}</a> <a href="{% url 'listing-change' list.id %}">[modifier]</a><a href="{% url 'listing-delete' list.id %}">[supprimer]</a></li>
     {% endfor %}
 </ul>
 

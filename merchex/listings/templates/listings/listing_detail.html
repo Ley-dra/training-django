@@ -16,6 +16,8 @@
  <li>Est déjà vendu : {{ list.sold|yesno }}</li>
 </ul>
 
+<a href="{% url 'listing-change' list.id %}">Modifier ce produit</a>
+<a href="{% url 'listing-delete' list.id %}">Supprimer ce produit</a>
 
 <a href="{% url 'listing-list' %}">Retour à tous les produits</a>
 
