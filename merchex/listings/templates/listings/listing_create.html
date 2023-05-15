@@ -1,0 +1,16 @@
+<!-- listings/templates/listings/listing_create.html -->
+
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+ <h1>Créer un nouveau Produit</h1>
+
+ <!-- Ajouter "novalidate" pour tester-->
+<form action="" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Envoyer">
+</form>
+
+{% endblock %}
