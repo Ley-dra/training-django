@@ -1,18 +1,17 @@
-<!-- listings/templates/listings/listings.html -->
+<!-- listings/templates/listings/listing_list.html -->
 
 {% extends 'listings/base.html' %}
 
 {% block content %}
 
-<h1>Hello Django !</h1>
-<p>Mes groupes préférés sont :</p>
+<h1>Listings</h1>
 <ul>
     {% for list in lists %}
-    <li>{{ list.title }}</li>
+    <li><a href="{% url 'listing-detail' list.id %}">{{ list.title }}</a></li>
     {% endfor %}
 </ul>
 
-<p>
+{% comment %} <p>
     Il y a 
     {% if lists|length < 5 %}
         peu de
@@ -22,6 +21,6 @@
         beaucoup de
     {% endif %}
         listes notées.
-</p>
+</p> {% endcomment %}
 
 {% endblock %}
